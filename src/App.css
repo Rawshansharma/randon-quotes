@@ -2,9 +2,34 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text p{
+  width: 70%;
+  border: 2px solid gray;
+  margin-left: 15%;
+  margin-top: 4%;
+  padding: 20px;
+  text-align: center;
+  font-weight: bolder;
+   font-size: 2.5rem;
+  background: -webkit-linear-gradient(#8f8080, #c93131);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text span{
+  display: flex;
+  float: right;
+  margin-right: 150px;
+    font-size: 25px;
+  text-decoration: underline;
+  color: gray;
+}
+.text h1{
+  text-align: center;
+  font-size: 60px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   
 }
 
 @media (prefers-reduced-motion: no-preference) {

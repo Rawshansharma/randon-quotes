@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState,useEffect} from 'react'
+import './App.css'
+const App = () => {
+  const [quotes  ,  setQuotes] = useState('')
+  const [name , setName] = useState('')
 
-function App() {
+     useEffect(() => {
+       fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
+      headers: {
+        'X-RapidAPI-Key': '9e50b62fd3msh220a1dfcb23d091p190af0jsn95eaf0c7b459',
+        'X-RapidAPI-Host': 'quotes15.p.rapidapi.com',
+      },
+    })
+      .then((response) =>   response.json())
+      .then((data) => {
+         setName(data.originator.name);
+         setQuotes(data.content);
+       })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='text'>
+      <h1>Randon Quotes:-</h1>
+      <p>{quotes}</p>
+      <span>-{name}</span>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
