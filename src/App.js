@@ -18,11 +18,15 @@ const App = () => {
        })
       .catch((error) => console.log(error));
   }, []);
-
+  
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <div className='text'>
       <h1>Randon Quotes:-</h1>
       <p>{quotes}</p>
+      <button onClick={refreshPage}>Next</button>
       <span>-{name}</span>
     </div>
   )

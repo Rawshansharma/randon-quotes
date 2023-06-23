@@ -4,6 +4,7 @@
 
 .text p{
   width: 70%;
+  border-radius: 10px;
   border: 2px solid gray;
   margin-left: 15%;
   margin-top: 4%;
@@ -30,6 +31,20 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
    
+}
+button{
+  display: flex;
+  float:right;
+  margin-right: 200px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid green;
+
+}
+button:hover{
+   cursor: pointer;
+   background-color: white;
+   color: green;
 }
 
 @media (prefers-reduced-motion: no-preference) {
